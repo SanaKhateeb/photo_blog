@@ -9,8 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
 var EntryListComponent = (function () {
-    function EntryListComponent() {
+    function EntryListComponent(http) {
+        http.get('/app/entries').toPromise()
+            .then(function (response) { debugger; }, function (error) { debugger; });
     }
     return EntryListComponent;
 }());
@@ -20,7 +23,7 @@ EntryListComponent = __decorate([
         templateUrl: 'entry-list.component.html',
         styleUrls: ['entry-list.component.css']
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [http_1.Http])
 ], EntryListComponent);
 exports.EntryListComponent = EntryListComponent;
 //# sourceMappingURL=entry-list.component.js.map
