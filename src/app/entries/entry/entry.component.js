@@ -9,19 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var entry_model_1 = require("../shared/entry.model");
 var EntryComponent = (function () {
     function EntryComponent() {
-        this.title = 'My first Photo';
-        this.photo = 'http://placehold.it/800x500?text=Angular Basics';
-        this.description = 'a description of my first photo';
-        this.comments = [
-            { name: "John", comment: "A comment" },
-            { name: "Amy", comment: "A comment" },
-            { name: "Jack", comment: "A comment" }
-        ];
     }
     return EntryComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", entry_model_1.Entry)
+], EntryComponent.prototype, "entry", void 0);
 EntryComponent = __decorate([
     core_1.Component({
         selector: 'app-entry',

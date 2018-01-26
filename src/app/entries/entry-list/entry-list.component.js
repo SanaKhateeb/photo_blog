@@ -9,9 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var entry_service_1 = require("../shared/entry.service");
 var EntryListComponent = (function () {
-    function EntryListComponent() {
+    function EntryListComponent(entryService) {
+        this.entryService = entryService;
     }
+    EntryListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.entryService
+            .getEntries().then(function (entries) { return _this.entries = entries; });
+    };
     return EntryListComponent;
 }());
 EntryListComponent = __decorate([
@@ -20,7 +27,7 @@ EntryListComponent = __decorate([
         templateUrl: 'entry-list.component.html',
         styleUrls: ['entry-list.component.css']
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [entry_service_1.EntryService])
 ], EntryListComponent);
 exports.EntryListComponent = EntryListComponent;
 //# sourceMappingURL=entry-list.component.js.map

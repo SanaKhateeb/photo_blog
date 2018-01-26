@@ -8,4 +8,5 @@ require("@angular/http");
 // 3rd party
 require("core-js");
 require("rxjs");
+require("angular-in-memory-web-api");
 //# sourceMappingURL=vendor.js.map
