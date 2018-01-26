@@ -1,5 +1,4 @@
 import { Component} from "@angular/core";
-import { Http} from "@angular/http";
 
 @Component({
     selector: 'app-entry-list',
@@ -8,8 +7,6 @@ import { Http} from "@angular/http";
 })
 
 export class EntryListComponent {
-    constructor(http : Http) {
-        http.get('/app/entries').toPromise()
-            .then(response => {debugger}, error => {debugger});
+    constructor() {
     }
 }

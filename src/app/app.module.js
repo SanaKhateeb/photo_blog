@@ -24,6 +24,9 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpModule
         ],
+        providers: [
+            entries_1.EntryService
+        ],
         declarations: [
             app_component_1.AppComponent,
             entries_1.EntryComponent,
