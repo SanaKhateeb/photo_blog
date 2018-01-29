@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
+var forms_1 = require("@angular/forms");
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var app_component_1 = require("./app.component");
 var entries_1 = require("./entries");
@@ -25,6 +26,7 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
+            forms_1.FormsModule,
             angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(backend_1.InMemoryEntryService)
         ],
         providers: [
