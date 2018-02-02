@@ -16,6 +16,7 @@ export class EntryCommentFormComponent {
     constructor(private entryService: EntryService) {}
 
     onSubmit(commentForm: NgForm) {
+        if(this.commentForm.invalid) return;
         let comment = {name: this.name, comment: this.comment};
         this.entryService.addComment(this.entryId, comment)
             .then(() => {
