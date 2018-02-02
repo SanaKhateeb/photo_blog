@@ -13,6 +13,9 @@ var entry_model_1 = require("../shared/entry.model");
 var EntryComponent = (function () {
     function EntryComponent() {
     }
+    EntryComponent.prototype.onCommentAdded = function (comment) {
+        this.entry.comments.push(comment);
+    };
     return EntryComponent;
 }());
 __decorate([
